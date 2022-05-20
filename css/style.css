@@ -14,7 +14,7 @@
 }
 
 header{
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 70px;
@@ -84,6 +84,7 @@ main{
 .search-carrinho{
     width: 26%;
     margin: 5px;
+
 }
 
 ul{
@@ -102,7 +103,7 @@ ul{
 }
 
 .card:hover{
-    border: 3px solid #F5F5F5;
+    border: 2px solid #F5F5F5;
 
 }
 
@@ -127,7 +128,7 @@ img{
     color: #ffffff;
 }
 
-h3{
+.Product_name{
     
     font-family: Inter;
     font-size: 18px;
@@ -159,9 +160,8 @@ input{
     height: 40px;
     width: 220px;
     left: 1138px;
-    top: 122px;
-    border-radius: 0px;
     background: #F5F5F5;
+    margin-right: 6px;
 }
 
 #search{
@@ -171,7 +171,6 @@ input{
     width: 90px;
     left: 1392px;
     top: 122px;
-    border-radius: 0px;
     
 }
 #search:hover{
@@ -186,7 +185,7 @@ input{
     text-align: center;
 }
 
-.title1{
+.title3{
     font-family: Inter;
     font-size: 18px;
     font-weight: 700;
@@ -196,22 +195,59 @@ input{
 
 }
 
-.content-car{
+.content-car-empty{
+    justify-content: center;
     background: #F5F5F5;
     color: black;
     font-family: Inter;
     height: 140px;
     font-size: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-}
-
-small{
-    cursor: pointer;
-}
-small:hover{
-    color: #37268C;
+    overflow: auto;
+    list-style: none;
     
 }
+
+.card_carrinho{
+    display: flex;
+    flex-direction: row;
+}
+
+.imagem_carrinho{
+    height: 88px;
+    width: 88px;
+    margin: 15px;
+    background: #Ffffff;
+    text-align: start;
+}
+
+.div_carrinho{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    text-align:left ;
+    padding: 10px;
+}
+
+.nome_carrinho{
+    width: 150px;
+}
+
+.preco_carrinho{
+    height: 16px;
+    width: 70px;
+    color: #2E245E;
+}
+
+.remover_carrinho{
+    height: 24px;
+    width: 115px;
+    color: #242424;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.remover_carrinho:hover{
+color: #2E245E;
+}
+
