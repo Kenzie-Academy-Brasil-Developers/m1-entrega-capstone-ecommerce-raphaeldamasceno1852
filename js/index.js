@@ -49,7 +49,7 @@ linkCalcados.innerText="Calçados";
 
 linkCamisetas.href="#";
 linkCamisetas.innerText="Camisetas";
-    
+
 // colocar os elementos filhos nos pais
 
 header.appendChild(logo)
@@ -62,42 +62,42 @@ header.appendChild(menu)
 // Main 
 // Div vitrine
 
-  const listaCards = document.querySelector('.lista-cards')
-    function criarCardProduto(cardProduto){
-
-      // 1 RECUPERANDO INFORMAÇÕES DO CARD
-       const img       = cardProduto.img
-       const categoria = cardProduto.tag
-       const nome      = cardProduto.nameItem
-       const descricao = cardProduto.description
-       const preco     = cardProduto.value
-       const botao     = cardProduto.addCart
-
-      // 2 CRIANDO OS ELEMENTOS
-      const tagLi          = document.createElement('li')
-      const tagImg         = document.createElement('img')
-      const tagMain        = document.createElement('main')
-      const tagButton      = document.createElement('button')
-      const tagNome        = document.createElement('h3')
-      const tagdescricao   = document.createElement('p')
-      const tagValor       = document.createElement('p')
-      const tagAddCarrinho = document.createElement('button')
-    
-      // 3 ADICIONAR INFORMAÇÕES
-      tagLi.classList.add('card')
-      tagImg.src               = `./img/${img}`
-      tagImg.alt               = "nameItem"
-      tagImg.classList.add('card-product')
-      tagMain.classList.add('text')
-      tagButton.classList.add('categoria')
-      tagButton.innerText      = cardProduto.tag
-      tagNome.classList.add('Product_name')
-      tagNome.innerText        = cardProduto.nameItem
-      tagdescricao.innerText   = cardProduto.description
-      tagValor.classList.add('Price')
-      tagValor.innerText       = cardProduto.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
-      tagAddCarrinho.classList.add('add')
-      tagAddCarrinho.innerText = cardProduto.addCart
+const listaCards = document.querySelector('.lista-cards')
+function criarCardProduto(cardProduto){
+  
+  // 1 RECUPERANDO INFORMAÇÕES DO CARD
+  const img       = cardProduto.img
+  const categoria = cardProduto.tag
+  const nome      = cardProduto.nameItem
+  const descricao = cardProduto.description
+  const preco     = cardProduto.value
+  const botao     = cardProduto.addCart
+  
+  // 2 CRIANDO OS ELEMENTOS
+  const tagLi          = document.createElement('li')
+  const tagImg         = document.createElement('img')
+  const tagMain        = document.createElement('main')
+  const tagButton      = document.createElement('button')
+  const tagNome        = document.createElement('h3')
+  const tagdescricao   = document.createElement('p')
+  const tagValor       = document.createElement('p')
+  const tagAddCarrinho = document.createElement('button')
+  
+  // 3 ADICIONAR INFORMAÇÕES
+  tagLi.classList.add('card')
+  tagImg.src               = `./img/${img}`
+  tagImg.alt               = "nameItem"
+  tagImg.classList.add('card-product')
+  tagMain.classList.add('text')
+  tagButton.classList.add('categoria')
+  tagButton.innerText      = cardProduto.tag
+  tagNome.classList.add('Product_name')
+  tagNome.innerText        = cardProduto.nameItem
+  tagdescricao.innerText   = cardProduto.description
+  tagValor.classList.add('Price')
+  tagValor.innerText       = cardProduto.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })
+  tagAddCarrinho.classList.add('add')
+  tagAddCarrinho.innerText = cardProduto.addCart
       
       // 4 MONTAR O CARD
       tagLi.appendChild(tagImg)
@@ -227,13 +227,15 @@ header.appendChild(menu)
   // 
     tagBtnRemover.addEventListener('click', function(){
       
-      titulo2.innerText="Carrinho vázio"
+      
+      let RemoverLi = conteudoCarrinho.removeChild(conteudoCarrinho.lastElementChild);
+      let back =  titulo2.innerText="Carrinho vázio"
       small.innerText="Adicione itens"
       
-      let RemoverLi = conteudoCarrinho.removeChild(conteudoCarrinho.firstElementChild);
       
-    })
     
+    })
+ 
     
 
   }
